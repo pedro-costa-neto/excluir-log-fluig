@@ -11,7 +11,7 @@ caminhos = caminhos.split(";")
 total_mega_bytes = 0
 
 for caminho in caminhos:
-    if os.path.isfile(caminho):
+    if os.path.isdir(caminho):
         for arquivo in os.listdir(caminho):
             if(arquivo.find("server-") >= 0 and (arquivo.find(".log") >= 0 or arquivo.find(".zip") >= 0)):
                 caminho_arquivo = os.path.join(caminho, arquivo)
